@@ -12,7 +12,8 @@ def signup(request):
         return redirect('/')
     # it  then listens to a post request,esentially a data submission requast to the server
     if request.method == 'POST':
-        # if yes then the data which is (request.post) is takens as an arguement of the UserCreation Function
+        # if yes then the data which isk00
+        # (request.post) is takens as an arguement of the UserCreation Function
         form = UserCreationForm(request.POST)
         # it then check for a condition if the form is valid,using is_valid() method - this is the method that does validation  
         if form.is_valid():
@@ -59,6 +60,7 @@ def signin(request):
     else:
         form = AuthenticationForm()
         return render(request, 'login.html', {'form': form})
+    
   # profile function
 def profile(request): 
     return render(request, 'profile.html')
